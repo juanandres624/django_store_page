@@ -1,6 +1,3 @@
-from cgi import print_exception
-from tkinter import image_names
-from unicodedata import category
 from django.db import models
 from category.models import Category
 from django.urls import reverse
@@ -24,3 +21,6 @@ class Product(models.Model):
 
     def get_url(self):
         return reverse('product_detail',args = [self.category.slug, self.slug])
+
+    class Meta:
+        ordering = ['-modified_date']
