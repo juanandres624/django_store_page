@@ -162,6 +162,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 
-#Media Files Configuration
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+#SMTP Config Not Working with Gmail
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'juanandres624@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Emi02092020'
+# EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'juanandres624@hotmail.com'
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'juanandres624@hotmail.com'
+EMAIL_HOST_PASSWORD = 'El@migo2709'
+EMAIL_USE_TLS = True
+
 
 
